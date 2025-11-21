@@ -1,3 +1,2 @@
 public class Computer {
-    int 
 }
