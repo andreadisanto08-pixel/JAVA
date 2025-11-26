@@ -1,4 +1,4 @@
-package Esercizio_6;
+package Esercizio_6_chat;
 
 public class Veicolo {
     private String marca;
