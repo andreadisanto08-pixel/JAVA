@@ -25,9 +25,4 @@ public class Articolo {
     public double getPrezzo() {
         return prezzo;
     }
-
-
-    
-
-    
 }

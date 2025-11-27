@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MainApp {
     public static void main(String[] args) {
 
-        scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         Articolo[] panini = {
         new Articolo("hamburger",5.50),
@@ -28,18 +28,29 @@ public class MainApp {
             System.out.println("0 Esci");
             System.out.print("Scelta: ");
             scelta=input.nextInt();
-            if(scelta == 1)
-            {
-                System.out.println("Scegli un panino");
+            switch (scelta) {
+                case 1:
+                    for(int i=0;i<panini.length;i++)
+                    {
+                        System.out.println(panini[i].getNome());
+                    }
 
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+
+                default:
+                    break;
             }
-            else if(scelta == 2)
-            {
 
-            }
-            else if(scelta == 3)
-
-
+          
         }
 
 
