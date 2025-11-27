@@ -34,7 +34,6 @@ public class MainApp {
                     {
                         System.out.println(panini[i].getNome());
                     }
-
                     break;
                 case 2:
 
