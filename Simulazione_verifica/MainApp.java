@@ -4,6 +4,8 @@ import java.util.scanner;
 
 public class MainApp {
 
+    public MainApp(){
+
      Articolo[] panini = new Articolo[3];
      panini[0] = new Articolo("paninoclassico" , 3.30);
      panini[1] = new Articolo("paninocotoletta" , 3.00);
@@ -22,7 +24,10 @@ public class MainApp {
     public static void main(String[] args) {
 
 
-        
+    gfu}
+
     }
+
+     
     
 }
