@@ -1,4 +1,14 @@
+/*+
+@author Andrea Di Santo
+La classe articolo 
 
+
+
+
+
+
+
+*/
 package Simulazione_verifica;
 
 public class Articolo {
