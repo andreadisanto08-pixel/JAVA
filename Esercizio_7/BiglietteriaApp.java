@@ -39,13 +39,14 @@ public class BiglietteriaApp {
                     {
                         if(biglietti[i].getterIsVenduto() == false)
                         {
-                            System.out.println("numero posto:   "  +biglietti[i].getternumeroPosto() + "   settore:      " +biglietti[i].getterSettore() + "    prezzobase:     "+biglietti[i].getterPrezzoBase());
-
+                            System.out.println("numero posto:   "  +biglietti[i].getternumeroPosto() + "   settore:      "
+                            +biglietti[i].getterSettore() + "    prezzobase:     "+biglietti[i].getterPrezzoBase());
                         }
                     }
-
                 break;
+
                 case 2:
+                    
 
                 break;
                 case 3:
