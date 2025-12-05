@@ -1,4 +1,4 @@
-package JAVA.Esercizio_7;
+package Esercizio_7;
 
 
 public class Biglietto {
