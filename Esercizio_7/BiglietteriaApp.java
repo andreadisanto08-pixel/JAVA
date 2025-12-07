@@ -27,7 +27,7 @@ public class BiglietteriaApp {
             System.out.println("\n1)Visualizza posti disponibili");
             System.out.println("\n2)Compra un biglietto");
             System.out.println("\n3)Report incassi e Sconto per i vip");
-            System.out.println("\n4)Esci");
+            System.out.println("\n4)Esci (premi zero)");
             System.out.println("\nCosa vuoi fare?");
             scelta = input.nextInt();
             input.nextLine();
