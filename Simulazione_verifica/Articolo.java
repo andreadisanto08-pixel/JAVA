@@ -3,11 +3,6 @@
 La classe articolo 
 
 
-
-
-
-
-
 */
 package Simulazione_verifica;
 
