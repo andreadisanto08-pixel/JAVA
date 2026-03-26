@@ -1,0 +1,7 @@
+# Ignora i file di sistema Mac
+.DS_Store
+
+# Ignora i file di compilazione Java
+*.class
+bin/
+target/
