@@ -1,11 +1,10 @@
 package HealthCareClinic;
 
 public class RicoverOdinario extends Paziente {
-    private double tariffa_base = 100.00;
     private  boolean pasto_personalizzato;
 
     public RicoverOdinario(String nome, int codiceCartellaClinica, double tariffaBase, boolean pasto_personalizzato) {
-        super(nome, codiceCartellaClinica, tariffaBase);
+        super(nome, codiceCartellaClinica,tariffaBase);
         this.pasto_personalizzato = pasto_personalizzato;
     }
 

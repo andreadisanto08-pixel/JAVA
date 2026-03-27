@@ -13,7 +13,7 @@ public abstract class Paziente {
         this.tariffaBase = tariffaBase;
     }
 
-    public abstract double calcolaCostoRicovero();
+    public abstract double calcolaCostoRicovero(int giorni);
 
 
     public int getCodiceCartellaClinica() {
