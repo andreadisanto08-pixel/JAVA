@@ -1,30 +1,33 @@
 package HealthCareClinic;
 
-public abstract class Paziente {
+public class Paziente {
+    private String codice_fiscale;
+    private String cognome;
     private String nome;
-    private int codiceCartellaClinica;
-    private double tariffaBase;
 
-
-    public Paziente(String nome, int codiceCartellaClinica, double tariffaBase
-    ) {
+    public Paziente(String nome,String cognome,String codice_fiscale){
+        this.codice_fiscale = codice_fiscale;
+        this.cognome = cognome;
         this.nome = nome;
-        this.codiceCartellaClinica = codiceCartellaClinica;
-        this.tariffaBase = tariffaBase;
+
     }
 
-    public abstract double calcolaCostoRicovero(int giorni);
-
-
-    public int getCodiceCartellaClinica() {
-        return codiceCartellaClinica;
+    public String getCodice_fiscale() {
+        return codice_fiscale;
+    }
+    public String getCognome() {
+        return cognome;
     }
     public String getNome() {
         return nome;
     }
-    public double getTariffabase(){
-        return tariffaBase;
+    public void setCodice_fiscale(String codice_fiscale) {
+        this.codice_fiscale = codice_fiscale;
     }
-
-
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
