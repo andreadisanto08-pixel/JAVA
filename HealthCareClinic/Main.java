@@ -25,7 +25,7 @@ public class Main {
 
             if(scelta == 1)
             {
-                for(int i=0;i<g.getMedici().size();i++)
+                for(int i=0;i<2;i++)
                 {
                     System.out.println(g + "\n");
                 }
@@ -41,7 +41,11 @@ public class Main {
                     Medico m = g.cercaMedico(idMedico);
                     System.out.println("Medico trovato");
                     String percorso = "Archivio/" + p.getCodice_fiscale() + ".txt";
-                    Visita v = new Visita(m, p, "10:30", "16 gennaio", "cuore");
+                    System.out.println("Inserisci l'ora");
+                    String orario = scanner.nextLine();
+                    System.out.println("Inserisci il giorno");
+                    String giornata = scanner.nextLine();
+                    Visita v = new Visita(m, p, orario, giornata, "cuore");
                     System.out.println(v);
                     fileWriter = new FileWriter(percorso);
                     bufferedWriter = new BufferedWriter(fileWriter);
