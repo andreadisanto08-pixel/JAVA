@@ -1,4 +1,4 @@
-package HealthCareClinic;
+
 
 public class Medico {
     private int ID;
@@ -6,7 +6,7 @@ public class Medico {
     private String cognome;
     private String specializazione;
 
-    public Medico(int Id,String nome,String cognome,String specializazione){
+    public Medico(int ID,String nome,String cognome,String specializazione){
         this.ID = ID;
         this.nome = nome;
         this.cognome = cognome;
@@ -37,6 +37,10 @@ public class Medico {
     }
     public void setSpecializazione(String specializazione) {
         this.specializazione = specializazione;
+    }
+    @Override
+    public String toString() {
+        return " NOME: "   + nome + " COGNOME: " + cognome + "SPECIALIZZAZIONE: " + specializazione + " ID: " + ID + " \n ";
     }
 
 

@@ -1,4 +1,4 @@
-package HealthCareClinic;
+
 
 public class Paziente {
     private String codice_fiscale;
@@ -29,5 +29,9 @@ public class Paziente {
     }
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    @Override
+    public String toString() {
+        return " NOME: " + nome + " COGNOME: " + cognome + " CF: " + codice_fiscale + "\n";
     }
 }

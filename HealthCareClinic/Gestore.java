@@ -1,4 +1,4 @@
-package HealthCareClinic;
+
 
 import java.util.ArrayList;
 
@@ -23,6 +23,11 @@ public class Gestore{
     public ArrayList<Paziente> getPazienti(){
         return pazienti;
     }
+    @Override
+    public String toString() {
+       return " Medici " + medici + " \n " + " pazienti " + pazienti;
+    }
+    
 
 
     public Paziente cercaPaziente(String codice_fiscale) throws PersonaNonTrovataException{

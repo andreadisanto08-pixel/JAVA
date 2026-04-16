@@ -1,4 +1,3 @@
-package HealthCareClinic;
 
 public class Visita {
     private Medico medico;
@@ -47,7 +46,11 @@ public class Visita {
         this.paziente = paziente;
     }
 
+    @Override
+    public String toString(){
 
+        return "la visita è prenotata con il medico " + medico.getCognome() + " al paziente " + paziente.getCognome() + " il giorno "+ data + " alle ore " + ora + " per " + diagnosi;
+    }
     
 
     
