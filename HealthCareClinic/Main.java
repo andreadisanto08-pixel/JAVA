@@ -2,9 +2,9 @@ package HealthCareClinic;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) 
     {
-    
         Gestore g = new Gestore();
         Scanner scanner = new Scanner(System.in);
         int scelta = -1;
@@ -22,7 +22,8 @@ public class Main {
             {
 
             }
-    }
+        }
+        
     }  
 
     

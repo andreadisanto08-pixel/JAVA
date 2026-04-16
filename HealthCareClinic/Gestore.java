@@ -2,7 +2,7 @@ package HealthCareClinic;
 
 import java.util.ArrayList;
 
-public class Gestore {
+public class Gestore{
 
     private ArrayList<Medico> medici = new ArrayList<>();
     private ArrayList<Paziente> pazienti = new ArrayList<>();
