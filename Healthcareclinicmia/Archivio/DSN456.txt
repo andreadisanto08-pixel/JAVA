@@ -1,0 +1,3 @@
+-la visita e stata prenotata al dottore : Calderoli       al paziente : muscolo     alle ore : 12       il giorno : 31 maggio
+
+-la visita e stata prenotata al dottore : Calderoli       al paziente : muscolo     alle ore : 13       il giorno : 17 giugno
