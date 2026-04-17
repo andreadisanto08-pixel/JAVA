@@ -1,19 +1,15 @@
-
-
 public class Medico {
-    private int ID;
     private String nome;
     private String cognome;
-    private String specializazione;
+    private String specializzazione;
+    private int ID;
 
-    public Medico(int ID,String nome,String cognome,String specializazione){
+    public Medico(String nome,String cognome,String specializzazione,int ID){
         this.ID = ID;
         this.nome = nome;
         this.cognome = cognome;
-        this.specializazione = specializazione;
-
+        this.specializzazione = specializzazione;
     }
-
     public String getCognome() {
         return cognome;
     }
@@ -23,8 +19,8 @@ public class Medico {
     public String getNome() {
         return nome;
     }
-    public String getSpecializazione() {
-        return specializazione;
+    public String getSpecializzazione() {
+        return specializzazione;
     }
     public void setCognome(String cognome) {
         this.cognome = cognome;
@@ -35,18 +31,13 @@ public class Medico {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public void setSpecializazione(String specializazione) {
-        this.specializazione = specializazione;
+    public void setSpecializzazione(String specializzazione) {
+        this.specializzazione = specializzazione;
     }
-    @Override
-    public String toString() {
-        return " NOME: "   + nome + " COGNOME: " + cognome + "SPECIALIZZAZIONE: " + specializazione + " ID: " + ID + " \n ";
+    @Override 
+    public String toString(){
+        return "    il nome e : " + nome + "    il cognome e : " + cognome + "    l'Id e : " + ID + "    specializzazione : " + specializzazione + "\n";
     }
-
-
-
-
-
 
     
 }

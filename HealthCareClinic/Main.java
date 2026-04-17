@@ -1,19 +1,15 @@
-
+import java.util.*;
 import java.io.*;
-import java.util.Scanner;
 
 public class Main {
-
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
         Gestore g = new Gestore();
         Scanner scanner = new Scanner(System.in);
-        int scelta = -1;
+        FileWriter filewriter = null ;
         BufferedWriter bufferedWriter = null;
-        FileWriter fileWriter = null;
+        int scelta = -1;
 
-
-        while(scelta != 0)
+        while(scelta !=0)
         {
             System.out.println("\n----CLINICA MEDICA-----");
             System.out.println("1.Nuova visita");
@@ -25,54 +21,80 @@ public class Main {
 
             if(scelta == 1)
             {
-                for(int i=0;i<2;i++)
+                for(int i=0;i<1;i++)
                 {
-                    System.out.println(g + "\n");
+                    System.out.println(g);
                 }
-                
+
                 System.out.println("Inserisci il codice fiscale : ");
-                String cf = scanner.nextLine();
+                String codf = scanner.nextLine();
                 System.out.println("Inserisci l'ID del medico: ");
-                int  idMedico = scanner.nextInt();
+                int id = scanner.nextInt();
                 scanner.nextLine();
-                try {
-                    Paziente p = g.cercaPaziente(cf);
-                    System.out.println("Paziente trovato");
-                    Medico m = g.cercaMedico(idMedico);
+                try 
+                {
+                    Medico m = g.cercaMedico(id);
                     System.out.println("Medico trovato");
-                    String percorso = "Archivio/" + p.getCodice_fiscale() + ".txt";
-                    System.out.println("Inserisci l'ora");
+                    Paziente p = g.cercaPaziente(codf);
+                    System.out.println("Paziente trovato");
+                    System.out.println("Inserisci l'ora : ");
                     String orario = scanner.nextLine();
-                    System.out.println("Inserisci il giorno");
+                    System.out.println("Inserisci giorno");
                     String giornata = scanner.nextLine();
-                    Visita v = new Visita(m, p, orario, giornata, "cuore");
+                    Visita v = new Visita(m, p, orario, giornata);
                     System.out.println(v);
-                    fileWriter = new FileWriter(percorso);
-                    bufferedWriter = new BufferedWriter(fileWriter);
-                    bufferedWriter.write("visita");
-                    System.out.println("Archiviazione completata!");
-                } catch (IOException e) {
+                    String percorso = "Archivio/" + p.getCf() + ".txt";
+                    filewriter = new FileWriter(percorso,true);
+                    bufferedWriter = new BufferedWriter(filewriter);
+                    bufferedWriter.write(v.toString());
+                    System.out.println("\nArchiviazione completata");
+
+                } catch (IOException e) 
+                {
                     System.out.println("Errore!");
                 }
-                 catch (PersonaNonTrovataException e) {
+                catch (PersonaNonTrovataException ex)
+                {
                     System.out.println("Persona non trovata");
                 }
-                finally{
-                    try {
-                        if (bufferedWriter != null) 
+                finally
+                {
+                    try
+                    {
+                        if(bufferedWriter != null)
                         {
                             bufferedWriter.close();
                         }
-                        
-                    } catch (IOException ex) {
+                    }
+                    catch (IOException ex)
+                    {
                         System.out.println("Errore!");
-                        
                     }
                 }
             }
-        }
-        
-    }  
+        }  
+    }
 
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+        
+
+    }
     
-}
+
