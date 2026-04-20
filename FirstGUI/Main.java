@@ -11,13 +11,13 @@ public class Main { // Definizione della classe principale
         JFrame frame = new JFrame(); // Crea fisicamente l'oggetto della finestra
         JPanel panel = new JPanel(); // Crea un pannello (un contenitore invisibile per raggruppare elementi)
 
-        panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));// Crea un bordo vuoto (margine interno) di 30px sopra, 30px a sinistra, 10px sotto e 30px a destra
+        panel.setBorder(BorderFactory.createEmptyBorder(1000, 1000, 1000, 1000));// Crea un bordo vuoto (margine interno) di 30px sopra, 30px a sinistra, 10px sotto e 30px a destra
         panel.setLayout(new GridLayout(0, 1)); // Imposta il layout del pannello: 0 righe significa "quante ne servono", 1 colonna sola
 
         // Aggiunge il pannello al centro della finestra principale
         frame.add(panel, BorderLayout.CENTER);
 
-        frame.setSize(1000, 1000);
+     
         
         // Dice al programma di chiudersi completamente quando premi la "X" della finestra
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
