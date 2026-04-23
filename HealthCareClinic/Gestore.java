@@ -1,46 +1,37 @@
-import java.util.ArrayList;
+import java.util.*;
+import java.io.*;
 
-public class Gestore{
+public class Gestore {
 
     private ArrayList<Medico> medici = new ArrayList<>();
     private ArrayList<Paziente> pazienti = new ArrayList<>();
 
     public Gestore(){
 
-        medici.add(new Medico(601, "alessandro", "martino", "pediatria"));
-        medici.add(new Medico(703, "alessio", "martinez", "cardiologia"));
+        medici.add(new Medico("marco", "Calderoli", "cuore", 78));
+        medici.add(new Medico("ruben", "della rocca", "fegato", 96));
 
-        pazienti.add(new Paziente("marco", "calderoli", "34432" ));
-        pazienti.add(new Paziente("Andrea", "anita", "343232"));
+        pazienti.add(new Paziente("lucas", "muscolo", "DSN456"));
+        pazienti.add(new Paziente("diego", "baldi", "DSN798"));
 
     }
 
-    public ArrayList<Medico> getMedici() {
+    public ArrayList<Medico> getMedici(){
         return medici;
     }
     public ArrayList<Paziente> getPazienti(){
         return pazienti;
     }
+
+
     @Override
-    public String toString() {
-       return " Medici " + medici + " \n " + " pazienti " + pazienti;
+    public String toString(){
+        return "i medici sono : " + medici + "i pazienti sono : " + pazienti;
     }
-    
 
 
-    public Paziente cercaPaziente(String codice_fiscale) throws PersonaNonTrovataException{
-        for(int i=0;i<pazienti.size();i++)
-        {
-            Paziente p = pazienti.get(i);
-            if(p.getCodice_fiscale().equals(codice_fiscale))
-            {
-                return p;
-            }
-        }
-        throw new PersonaNonTrovataException("Persona non trovata");
-    }
-    public Medico cercaMedico(int ID) throws PersonaNonTrovataException{
-        for(int i=0;i<medici.size();i++)
+    public Medico cercaMedico(int ID) throws PersonaNonTrovataException {
+        for(int i = 0;i<medici.size();i++)
         {
             Medico m = medici.get(i);
             if(m.getID() == ID)
@@ -48,6 +39,24 @@ public class Gestore{
                 return m;
             }
         }
-        throw new PersonaNonTrovataException("persona non trovata");
-}
+        throw new PersonaNonTrovataException("nessuna persona trovata!");
+    }
+
+
+    public Paziente cercaPaziente(String cf) throws PersonaNonTrovataException{
+        for(int i = 0; i<pazienti.size();i++)
+        {
+            Paziente p = pazienti.get(i);
+            if(p.getCf().equals(cf))
+            {
+                return p; 
+            }
+        }
+        throw new PersonaNonTrovataException("nessuna persona trovata!");
+    }
+
+
+
+
+    
 }

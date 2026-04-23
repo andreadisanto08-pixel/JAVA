@@ -1,19 +1,15 @@
-
-
 public class Paziente {
-    private String codice_fiscale;
-    private String cognome;
     private String nome;
-
-    public Paziente(String nome,String cognome,String codice_fiscale){
-        this.codice_fiscale = codice_fiscale;
-        this.cognome = cognome;
+    private String cognome;
+    private String cf;
+    
+    public Paziente(String nome,String cognome,String cf){
         this.nome = nome;
-
+        this.cognome = cognome;
+        this.cf = cf;
     }
-
-    public String getCodice_fiscale() {
-        return codice_fiscale;
+    public String getCf() {
+        return cf;
     }
     public String getCognome() {
         return cognome;
@@ -21,8 +17,8 @@ public class Paziente {
     public String getNome() {
         return nome;
     }
-    public void setCodice_fiscale(String codice_fiscale) {
-        this.codice_fiscale = codice_fiscale;
+    public void setCf(String cf) {
+        this.cf = cf;
     }
     public void setCognome(String cognome) {
         this.cognome = cognome;
@@ -31,7 +27,7 @@ public class Paziente {
         this.nome = nome;
     }
     @Override
-    public String toString() {
-        return " NOME: " + nome + " COGNOME: " + cognome + " CF: " + codice_fiscale + "\n";
+    public String toString(){
+        return "     il nome e :" + nome + "     il cognome e : " + cognome + "     il cf e : " + cf + "\n"; 
     }
 }
