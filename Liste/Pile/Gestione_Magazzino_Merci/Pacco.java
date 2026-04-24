@@ -5,13 +5,13 @@ public class Pacco
     private String codice;
     private String descrizione;
     private double peso;
-    private Pacco next;
+    private Pacco puntatoreNext;
 
     public Pacco(String codice,String descrizione,double peso){
         this.codice = codice;
         this.descrizione = descrizione;
         this.peso = peso;
-        this.next = null;
+        this.puntatoreNext= null;
     }
     
     public String getCodice() {
@@ -20,14 +20,14 @@ public class Pacco
     public String getDescrizione() {
         return descrizione;
     }
-    public Pacco getNext() {
-        return next;
+    public Pacco getpuntatoreNext() {
+        return puntatoreNext;
     }
     public double getPeso() {
         return peso;
     }
-    public void setNext(Pacco next){
-        this.next = next;
+    public void setpuntatoreNext(Pacco puntatoreNext){
+        this.puntatoreNext = puntatoreNext;
     }
     public String toString() {
         return "Il codice del pacco è" + codice + "la descrizione è " + descrizione + "il peso è " + peso;

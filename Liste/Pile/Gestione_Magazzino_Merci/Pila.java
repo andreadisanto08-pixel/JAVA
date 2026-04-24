@@ -1,30 +1,47 @@
 package Gestione_Magazzino_Merci;
 
 public class Pila {
-    private Pacco first;
+    private Pacco head;
     private double pesoSpedito;
 
     public Pila(){
-        this.first = null;
+        this.head = null;
         this.pesoSpedito = 0.0;
     }
 
     public void push(String c,String d,double p){
-        Pacco nuovo = new Pacco(c, d, p);
-        nuovo.setNext(first);
-        first = nuovo;
-        
+        Pacco nuovoPacco = new Pacco(c, d, p);
+        nuovoPacco.setpuntatoreNext(head);
+        head = nuovoPacco;  
     }
 
-    public String pop(){
-        if(first == null){
-            return "magazzino vuoto";
+    public void pop(){
+        if(head == null)
+        {
+            System.out.println("magazzino vuoto");
+            return;
         }
-        Pacco rimosso = first;
-        this.pesoSpedito = this.pesoSpedito + rimosso.getPeso();
-        first = first.getNext();
-        return "Il pacco rimosso è " + rimosso.getCodice();
+
+        Pacco rimosso = head;
+        pesoSpedito = pesoSpedito + rimosso.getPeso();
+        head = head.getpuntatoreNext();
+        System.out.println("Il pacco rimosso è : " + rimosso.getCodice());
     }
-    
+
+    public void stampaPila(){
+        if(head == null)
+        {
+            System.out.println("Pila vuota non ci sono pacchi");
+            return;
+        }
+        System.out.println("-------------PILA-------------");
+        Pacco temp = head;
+        while(temp != null)
+        {
+            System.out.println("Codice  : " + temp.getCodice() + " Peso : " + temp.getPeso());
+            temp = temp.getpuntatoreNext();
+        }
+        System.out.println("------------------------------");
+    }
     
 }

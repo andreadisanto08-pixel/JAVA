@@ -14,6 +14,7 @@ public class Main {
         {
             System.out.println("1.Aggiungi pacco");
             System.out.println("2.Togli pacco");
+            System.out.println("3.Visualizza pila");
             System.out.println("0 per uscire");
             System.out.println("Cosa vuoi fare ?");
             scelta = scanner.nextInt();
@@ -34,15 +35,14 @@ public class Main {
 
             if(scelta == 2 )
             {
+                pila.pop();
                 
             }
-
-            
-
-
-
+            if(scelta == 3)
+            {
+                pila.stampaPila();
+            }
         }
-
     }
     
 }
