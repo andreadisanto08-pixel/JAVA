@@ -1,30 +1,28 @@
-public class CalcoloRisorse implements Runnable{
-    private int[] fondi;
-    private int totale;
+public class calcoloRisorse implements Runnable {
+
+    private int[] saldo;
+    private int totaleFondi;
     
-    public CalcoloRisorse(int[] fondi,int totale){
-        this.fondi=fondi;
-        this.totale = 0;
+    public calcoloRisorse(int[] saldo){
+        this.saldo= saldo;
+        this.totaleFondi=0;
     }
-
-    public int[] getFondi() {
-        return fondi;
+    public int getTotaleFondi() {
+        return totaleFondi;
     }
-
     @Override
-    public void run(){
-        for(int i=0;i<fondi.length;i++)
+    public void run() {
+        for(int i=0;i<saldo.length;i++)
         {
-            totale=totale + fondi[i];
+            totaleFondi= totaleFondi+saldo[i];
+            try {
+                Thread.sleep(150);
+            } catch (InterruptedException e) {
+                System.out.println("Interrotto");
+                return;
+            }
+            System.out.println("Calcolo risorse completato");
         }
-        try {
-            Thread.sleep(200);
-            
-        } catch (InterruptedException e) {
-            System.out.println("Interrotto");
         
-        }
-
     }
-    
 }
